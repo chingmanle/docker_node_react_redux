@@ -16,3 +16,9 @@ services:
       - 5000:80
     depends_on:
       - product-service
+  nodejs:
+    build: ./nodejs
+    volumes:
+      - ./nodejs:/usr/src/app
+    ports:
+      - 5002:8888
